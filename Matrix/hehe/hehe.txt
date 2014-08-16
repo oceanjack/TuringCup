@@ -1,0 +1,178 @@
+﻿#include "stdafx.h"
+#include "AI_user.h"
+#include <algorithm>
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <cmath>
+#include <ctime>
+#include <cstdlib>
+#include <bitset>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+using namespace std;
+
+extern "C" AI_USER_API PlayerName NameAI() {
+	PlayerName temp;
+	strcpy_s(temp.TeamName, "Shangke7788");		//队名
+	strcpy_s(temp.my1Name,  "Shang");			//1号AI的名字
+	strcpy_s(temp.my2Name,  "ke7788");			//2号AI的名字
+	return temp;
+}
+
+const int inf = 0x13131313;
+
+Order goto_des(int x, int y, User * u) {
+	if (x == u->x[u->who] && y == u->y[u->who]) {
+		Order o; o.act = STOP;
+		return o;
+	}
+	int maptmp[boderY][boderX];
+	int que[boderY * boderX][2], qn=0;
+	int fx[5][2] = {{0,0},{-1,0},{1,0},{0,-1},{0,1}};
+	Order ord[5];
+	ord[0].act = STOP; ord[1].act = UP;
+	ord[2].act = DOWN; ord[3].act = LEFT;
+	ord[4].act = RIGHT;
+	fill(maptmp[0], maptmp[boderY], inf);
+	maptmp[y][x] = 0;
+	que[qn][0] = y;
+	que[qn++][1] = x;
+	for ( int i=0; i<qn; i++) {
+		for ( int j=1; j<=4; j++) {
+			int tmpy = que[i][0] + fx[j][0];
+			int tmpx = que[i][1] + fx[j][1];
+			if (tmpy >= 0 && tmpy < boderY && 
+				tmpx >= 0 && tmpx < boderX && 
+				u->mapInfo[tmpy][tmpx] == 1 && maptmp[tmpy][tmpx] == inf) {
+				maptmp[tmpy][tmpx] = maptmp[que[i][0]][que[i][1]] + 1;
+				que[qn][0] = tmpy;
+				que[qn++][1] = tmpx;
+				if (maptmp[u->y[u->who]][u->x[u->who]] != inf) {
+					break;
+				}
+			}
+		}
+		if (maptmp[u->y[u->who]][u->x[u->who]] != inf) {
+			break;
+		}
+	}
+	for ( int i=1; i<=4; i++) {
+		int tmpy = u->y[u->who] + fx[i][0];
+		int tmpx = u->x[u->who] + fx[i][1];
+		if (tmpx >= 0 && tmpx < boderX && 
+			tmpy >= 0 && tmpy < boderY && 
+			maptmp[tmpy][tmpx] + 1 == maptmp[u->y[u->who]][u->x[u->who]]) {
+			return ord[i];
+		}
+	}
+	return ord[0];
+}
+
+bool judge_kill(Order & tmp, User * u) {
+	if (u->power[u->who] < 10 || u->magic_num[u->who]) {
+		return false;
+	}
+	tmp.act = ATC;
+	int maptmp[boderY][boderX];
+	int que[boderY * boderX][4], qn;
+	int fx[5][2] = {{0,0},{-1,0},{1,0},{0,-1},{0,1}};
+	for ( int i=0; i<2; i++) {
+		fill(maptmp[0], maptmp[boderY], 0);
+		qn = 0;
+		que[qn][0] = u->y[u->who];
+		que[qn][1] = u->x[u->who];
+		que[qn][2] = -1;
+		que[qn++][3] = 0;
+		for ( int j=0; j<qn; j++) {
+			for ( int k=1; k<=4; k++) {
+				int tmpy = que[j][0] + fx[k][0];
+				int tmpx = que[j][1] + fx[k][1];
+				if (tmpy >= 0 && tmpy < boderY && 
+					tmpx >= 0 && tmpx < boderX &&
+					maptmp[tmpy][tmpx] == 0 && u->mapInfo[tmpy][tmpx] != 2) {
+					maptmp[tmpy][tmpx] = maptmp[que[j][0]][que[j][1]] + 1;
+					que[qn][0] = tmpy;
+					que[qn][1] = tmpx;
+					que[qn][2] = j;
+					que[qn++][3] = k;
+					if (tmpy == u->ey[i] && tmpx == u->ex[i]) {
+						break;
+					}
+				}
+			}
+			if (maptmp[u->ey[i]][u->ex[i]]) {
+				break;
+			}
+		}
+		if (maptmp[u->ey[i]][u->ex[i]] < u->magic_len[u->who]) {
+			int j = qn-1;
+			while (j) {
+				int tmpy = que[j][0];
+				int tmpx = que[j][1];
+				tmp.dir[maptmp[tmpy][tmpx]-1] = que[j][3];
+				j = que[j][2];
+			}
+			return true;
+		}
+	}
+	return false;
+}
+
+extern "C" AI_USER_API Order get_order(User *u) {
+	Order tmp;
+	int x, y;
+	if (u->m[u->who] == 0) {
+		u->m[u->who] = 8;
+		u->m[u->who + 2] = 0;
+	}
+	if (u->m[u->who + 2] != u->goods_num[u->who]) {
+		if (u->goods_num[u->who] > u->m[u->who + 2]) {
+			for ( int i=u->m[u->who+2]; i<u->goods_num[u->who]; i++) {
+				if (u->goods_tpye[u->who][i] == BLUE) {
+					u->m[u->who] += 2;
+				}
+			}
+		}
+		u->m[u->who + 2] = u->goods_num[u->who];
+	}
+	if (!judge_kill(tmp, u)) {
+		switch (u->who) {
+		case 0:
+			x = boderX;
+			y = boderY;
+			for ( int i=0; i<u->map_goods; i++) {
+				if (x > u->map_goods_x[i]) {
+					x = u->map_goods_x[i];
+					y = u->map_goods_y[i];
+				} else {
+					if (x == u->map_goods_x[i]) {
+						y = min(y, u->map_goods_y[i]);
+					}
+				}
+			}
+			break;
+		case 1:
+			x = -1;
+			y = -1;
+			for ( int i=0; i<u->map_goods; i++) {
+				if (x < u->map_goods_x[i]) {
+					x = u->map_goods_x[i];
+					y = u->map_goods_y[i];
+				} else {
+					if (x == u->map_goods_x[i]) {
+						y = max(y, u->map_goods_y[i]);
+					}
+				}
+			}
+			break;
+		}
+		if (x == -1 || x == boderX) {
+			tmp.act = STOP;
+		} else {
+			tmp = goto_des(x, y, u);
+		}
+	}
+	return tmp;
+}

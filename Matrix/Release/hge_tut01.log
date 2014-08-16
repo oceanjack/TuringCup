@@ -1,0 +1,264 @@
+﻿生成启动时间为 2013/1/18 22:14:18。
+     1>项目“H:\Turing\Matrix\hge_tut01.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“.\Release\hge_tut01.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Matrix.cpp  /QIfist 
+     1>cl : 命令行 warning D9035: “QIfist”选项已否决，并将在将来的版本中移除
+         Matrix.cpp
+     1>h:\turing\matrix\Matrix.h(271): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(105) : 参见“strcpy”的声明
+     1>h:\turing\matrix\Matrix.h(272): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(105) : 参见“strcpy”的声明
+     1>h:\turing\matrix\Matrix.h(302): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : 参见“freopen”的声明
+     1>h:\turing\matrix\Matrix.h(303): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(308): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(322): warning C4018: “<”: 有符号/无符号不匹配
+     1>h:\turing\matrix\Matrix.h(339): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\time.inl(112) : 参见“localtime”的声明
+     1>h:\turing\matrix\Matrix.h(355): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(366): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(367): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(368): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(369): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(370): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(371): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(372): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(373): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(374): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(375): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(376): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(377): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(381): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : 参见“freopen”的声明
+     1>h:\turing\matrix\Matrix.h(395): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : 参见“freopen”的声明
+     1>h:\turing\matrix\Matrix.h(436): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : 参见“freopen”的声明
+     1>h:\turing\matrix\Matrix.h(447): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : 参见“freopen”的声明
+     1>h:\turing\matrix\Matrix.h(461): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : 参见“freopen”的声明
+     1>h:\turing\matrix\Matrix.h(471): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : 参见“freopen”的声明
+     1>h:\turing\matrix\Matrix.h(474): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(475): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(476): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(477): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(478): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(479): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(480): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(482): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : 参见“freopen”的声明
+     1>h:\turing\matrix\Matrix.h(483): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(489): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(490): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>h:\turing\matrix\Matrix.h(491): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(492): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(493): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>h:\turing\matrix\Matrix.h(494): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(495): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(496): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(497): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(498): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>h:\turing\matrix\Matrix.h(499): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(500): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(501): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>h:\turing\matrix\Matrix.h(502): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(503): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(504): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(505): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(508): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(510): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(512): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(514): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(515): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(516): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(517): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(518): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(519): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(523): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : 参见“freopen”的声明
+     1>h:\turing\matrix\Matrix.h(524): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(527): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(528): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(529): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(530): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(534): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : 参见“freopen”的声明
+     1>h:\turing\matrix\Matrix.h(537): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(538): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(539): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(543): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>h:\turing\matrix\Matrix.h(546): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\stdio.h(249) : 参见“freopen”的声明
+     1>h:\turing\matrix\Matrix.h(558): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(608): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(608): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(1448): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(1448): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(1800): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>h:\turing\matrix\Matrix.h(1993): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(1993): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(1999): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(1999): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(2003): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(2003): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(2005): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(2005): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(2008): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(2008): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(2018): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(2018): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(2019): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(2019): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(2025): warning C4244: “参数”: 从“size_t”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2025): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(2025): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(2026): warning C4244: “参数”: 从“size_t”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2026): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(2026): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(2030): warning C4244: “参数”: 从“size_t”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2030): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(2030): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(2031): warning C4244: “参数”: 从“size_t”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2031): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(2031): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(2035): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(2035): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(2036): warning C4305: “参数”: 从“__int64”到“int”截断
+     1>h:\turing\matrix\Matrix.h(2036): warning C4309: “参数”: 截断常量值
+     1>h:\turing\matrix\Matrix.h(2155): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2155): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2203): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2203): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2203): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2254): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2254): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2262): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2262): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2279): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2279): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2287): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2287): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2323): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2324): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2337): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2338): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2390): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2393): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2399): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2400): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2401): warning C4244: “*=”: 从“double”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2402): warning C4244: “*=”: 从“double”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2403): warning C4305: “*=”: 从“double”到“float”截断
+     1>h:\turing\matrix\Matrix.h(2404): warning C4305: “*=”: 从“double”到“float”截断
+     1>h:\turing\matrix\Matrix.h(2467): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2470): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2476): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2477): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2478): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2479): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2482): warning C4244: “*=”: 从“double”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2483): warning C4244: “*=”: 从“double”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2484): warning C4244: “*=”: 从“double”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2485): warning C4244: “*=”: 从“double”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2541): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2542): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2734): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2833): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>h:\turing\matrix\Matrix.h(2949): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(2949): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>h:\turing\matrix\Matrix.h(3007): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+       ResourceCompile:
+         所有输出均为最新。
+       Link:
+         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\hge_tut01.exe" /INCREMENTAL:NO /NOLOGO .\hge181\lib\vc\hge.lib .\hge181\lib\vc\hgehelp.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBC.lib /MANIFEST /ManifestFile:".\Release\hge_tut01.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"H:\Turing\Matrix\Release\hge_tut01.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\hge_tut01.lib" /MACHINE:X86 /PROFILE .\Release\Matrix.res
+         .\Release\aic.obj
+         .\Release\ReadAI.obj
+         .\Release\autoblack.obj
+         .\Release\background.obj
+         .\Release\Stars.obj
+         .\Release\character.obj
+         .\Release\Ren.obj
+         .\Release\cursor.obj
+         .\Release\Garden.obj
+         .\Release\GfxEdit.obj
+         .\Release\GfxFont.obj
+         .\Release\box.obj
+         .\Release\Matrix.obj
+         .\Release\menuitem.obj
+         .\Release\orz.obj
+         .\Release\orz2.obj
+         .\Release\skill.obj
+         .\Release\effect.obj
+         .\Release\sound.obj
+         .\Release\star.obj
+         .\Release\timer.obj
+         hge_tut01.vcxproj -> H:\Turing\Matrix\.\Release\hge_tut01.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:".\Release\hge_tut01.exe;#1" /manifest .\Release\hge_tut01.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“.\Release\hge_tut01.unsuccessfulbuild”。
+         正在对“.\Release\hge_tut01.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“H:\Turing\Matrix\hge_tut01.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.55

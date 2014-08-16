@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="h">
+      <UniqueIdentifier>{9aa8e86d-0554-472c-9359-832b8be5529f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp">
+      <UniqueIdentifier>{302c6327-60bb-4c60-98c2-91c2e2523a13}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="sound\sound.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="background\background.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="hge181\include\hgefont.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="cursor\cursor.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="character\character.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="menuitem\menuitem.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\box\box.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="var\musicVar.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="sound\effect.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="background\autoblack.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="fightmod\Garden.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="timer\timer.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="star\star.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="background\Stars.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="AIc\aic.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="AIc\ReadAI.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Info.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="skill\skill.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="fightmod\Goods.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="fontCN\GfxEdit.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="fontCN\GfxFont.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="character\Ren.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="orz\orz.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="orz\orz2.h">
+      <Filter>h</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="sound\sound.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="background\background.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="cursor\cursor.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="character\character.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="menuitem\menuitem.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\box\box.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="sound\effect.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="background\autoblack.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="fightmod\Garden.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="timer\timer.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="star\star.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="background\Stars.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="AIc\aic.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="AIc\ReadAI.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="skill\skill.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="fontCN\GfxEdit.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="fontCN\GfxFont.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="character\Ren.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="orz\orz.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="orz\orz2.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="background\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Matrix.rc">
+      <Filter>cpp</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

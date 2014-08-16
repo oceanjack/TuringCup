@@ -1,0 +1,348 @@
+﻿#include "stdafx.h"
+#include "AI_user.h"
+#include <algorithm>
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <cmath>
+#include <ctime>
+#include <cstdlib>
+#include <bitset>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+using namespace std;
+
+extern "C" AI_USER_API PlayerName NameAI() {
+	PlayerName temp;
+	strcpy_s(temp.TeamName, "TEST2");		//队名
+	strcpy_s(temp.my1Name,  "1992");			//1号AI的名字
+	strcpy_s(temp.my2Name,  "zyn");			//2号AI的名字
+	return temp;
+}
+
+inline bool isIn(User *u, int _y, int _x)
+{
+	return (_x >= 0 && _y >= 0 && _x < boderX && _y < boderY);
+}
+
+inline bool isEmpty(User *u, int _y, int _x)
+{
+	return (u->mapInfo[_y][_x] == LAND);
+}
+
+inline bool danger(User *u, int _y, int _x)
+{
+	for(int i = 0; i < u->emagic_num[0]; ++i)
+		if(_y == u->emagic_y[0][i] && _x == u->emagic_x[0][i])
+			return true;
+	for(int i = 0; i < u->emagic_num[1]; ++i)
+		if(_y == u->emagic_y[1][i] && _x == u->emagic_x[1][i])
+			return true;
+	for(int i = 0; i < u->magic_num[1-u->who]; ++i)
+		if(_y == u->magic_y[1-u->who][i] && _x == u->magic_x[1-u->who][i])
+			return true;
+	return false;
+}
+
+inline int atc(User *u)
+{
+	//up,down,left,right
+	int dir[5][2] = {{0,0},{0,-1},{0,1},{-1,0},{1,0}};
+	if(u->power[u->who] <= 0)
+		return false;
+	int len = 0;
+	for(int i = 0; i < u->goods_num[u->who]; ++i)
+		if(u->goods_tpye[u->who][i] == BLUE)
+			len += 2;
+	for(int j = 0; j < 2; ++j)
+	{
+		if(0 == u->ex[j] && 0 == u->ey[j])
+			continue;
+		for(int i = 0; i < 8 + len; ++i)
+		{
+			int tx = u->x[u->who] + dir[u->dir[u->who]][0] * (i+1);
+			int ty = u->y[u->who] + dir[u->dir[u->who]][1] * (i+1);
+			if(isIn(u, ty, tx) && u->mapInfo[ty][tx] == TREE)
+				break;
+			if(tx == u->ex[j] && ty == u->ey[j])
+				return 0;
+		}
+	}
+	for(int k = 1; k <= 4; ++k)
+	{
+		for(int j = 0; j < 2; ++j)
+		{
+			if(0 == u->ex[j] && 0 == u->ey[j])
+				continue;
+			for(int i = 0; i < 2; ++i)
+			{
+				int tx = u->x[u->who] + dir[k][0] * (i+1);
+				int ty = u->y[u->who] + dir[k][1] * (i+1);
+				if(isIn(u, ty, tx) && u->mapInfo[ty][tx] == TREE)
+					goto loop;
+			}
+			for(int i = 1; i < 8 + len; ++i)
+			{
+				int tx = u->x[u->who] + dir[k][0] * (i+1);
+				int ty = u->y[u->who] + dir[k][1] * (i+1);
+				if(isIn(u, ty, tx) && u->mapInfo[ty][tx] == TREE)
+					break;
+				if(tx == u->ex[j] && ty == u->ey[j])
+					return k;
+			}
+			loop:;
+		}
+	}
+	return -1;
+}
+
+inline Order getO(User *u)
+{
+	Order tmp;
+	tmp.act = STOP;
+	//up,down,left,right
+	int dir[4][2] = {{0,-1},{0,1},{-1,0},{1,0}};
+	int head = 0;
+	int last = 0;
+	int way[1000][2];
+	way[0][0] = u->x[u->who];
+	way[0][1] = u->y[u->who];
+	int my_dir[1000];
+	my_dir[0] = STOP;
+	bool end = false;
+	int my_map[17][22];
+	memset(my_map, 0, sizeof(my_map));
+	my_map[way[0][1]][way[0][0]] = 1;
+	int tx = way[0][0];
+	int ty = way[0][1];
+	for(int j = 0; j < u->map_goods; ++j)
+	{
+		if(tx == u->map_goods_x[j] && ty == u->map_goods_y[j] && !danger(u, ty, tx))
+		{
+			tmp.act = my_dir[last];
+			end = true;
+			break;
+		}
+	}
+	for(;!end;)
+	{
+		for(int i = 0; i < 4; ++i)
+		{
+			tx = way[head][0] + dir[i][0];
+			ty = way[head][1] + dir[i][1];
+			if(!isIn(u, ty, tx) || !isEmpty(u, ty, tx) || my_map[ty][tx] || danger(u, ty, tx))
+				continue;
+			++last;
+			if(last >= 1000)
+				break;
+			way[last][0] = tx;
+			way[last][1] = ty;
+			my_map[ty][tx] = 1;
+			if(my_dir[head] == STOP)
+			{
+				switch(i)
+				{
+					case 0:
+						my_dir[last] = UP;
+						break;
+					case 1:
+						my_dir[last] = DOWN;
+						break;
+					case 2:
+						my_dir[last] = LEFT;
+						break;
+					case 3:
+						my_dir[last] = RIGHT;
+						break;
+				}
+			}
+			else
+				my_dir[last] = my_dir[head];
+			if(u->who == 0)
+			{
+				for(int j = 0; j < u->map_goods; ++j)
+				{
+					if(tx == u->map_goods_x[j] && ty == u->map_goods_y[j])
+					{
+						u->m[0] = j;
+						tmp.act = my_dir[last];
+						end = true;
+						break;
+					}
+				}
+			}
+			else
+			{
+				for(int j = 0; j < u->map_goods; ++j)
+				{
+					if(j == u->m[0])
+						continue;
+					if(tx == u->map_goods_x[j] && ty == u->map_goods_y[j])
+					{
+						tmp.act = my_dir[last];
+						end = true;
+						break;
+					}
+				}
+			}
+			if(end)
+				break;
+		}
+		if(end)
+			break;
+		++head;
+		if(head > last)
+			break;
+	}
+	return tmp;
+}
+
+Order get_safe(User *u)
+{
+	Order tmp;
+	tmp.act = STOP;
+	//up,down,left,right
+	int dir[4][2] = {{0,-1},{0,1},{-1,0},{1,0}};
+	int head = 0;
+	int last = 0;
+	int way[1000][2];
+	way[0][0] = u->x[u->who];
+	way[0][1] = u->y[u->who];
+	int my_dir[1000];
+	my_dir[0] = STOP;
+	bool end = false;
+	int my_map[17][22];
+	memset(my_map, 0, sizeof(my_map));
+	my_map[way[0][1]][way[0][0]] = 1;
+	int tx = way[0][0];
+	int ty = way[0][1];
+	for(int j = 0; j < u->map_goods; ++j)
+	{
+		if(!danger(u, ty, tx))
+		{
+			tmp.act = my_dir[last];
+			end = true;
+			break;
+		}
+	}
+	for(;!end;)
+	{
+		for(int i = 0; i < 4; ++i)
+		{
+			tx = way[head][0] + dir[i][0];
+			ty = way[head][1] + dir[i][1];
+			if(!isIn(u, ty, tx) || !isEmpty(u, ty, tx) || my_map[ty][tx] || danger(u, ty, tx))
+				continue;
+			++last;
+			if(last >= 1000)
+				break;
+			way[last][0] = tx;
+			way[last][1] = ty;
+			my_map[ty][tx] = 1;
+			if(my_dir[head] == STOP)
+			{
+				switch(i)
+				{
+					case 0:
+						my_dir[last] = UP;
+						break;
+					case 1:
+						my_dir[last] = DOWN;
+						break;
+					case 2:
+						my_dir[last] = LEFT;
+						break;
+					case 3:
+						my_dir[last] = RIGHT;
+						break;
+				}
+			}
+			else
+				my_dir[last] = my_dir[head];
+			if(!danger(u, ty, tx))
+			{
+				tmp.act = my_dir[last];
+				end = true;
+				break;
+			}
+			if(end)
+				break;
+		}
+		if(end)
+			break;
+		++head;
+		if(head > last)
+			break;
+	}
+	return tmp;
+}
+
+extern "C" AI_USER_API Order get_order(User *u) {
+	Order tmp;
+	if(u->t < 9400 && u->m[199] == 0)
+	{
+		srand(time(NULL));
+		tmp.act = 2012;
+		u->m[199] = 1;
+		return tmp;
+	}
+if(u->b_skill_cd[u->who] <= 0 && u->power[u->who] >= 30)
+	{
+		tmp.act = KILL;
+		return tmp;
+	}
+	if(u->s_skill_cd[u->who] <= 0 && u->power[u->who] >= 10)
+	{
+		for(int j = 0; j < 2; ++j)
+			for(int i = 0; i < u->emagic_num[j]; ++i)
+			{
+				if(u->x[u->who] - 1 == u->emagic_x[j][i] && u->y[u->who] == u->emagic_y[j][i])
+				{
+					tmp.act = ONE;
+					tmp.dir[0] = LEFT;
+					return tmp;
+				}
+				if(u->x[u->who] + 1 == u->emagic_x[j][i] && u->y[u->who] == u->emagic_y[j][i])
+				{
+					tmp.act = ONE;
+					tmp.dir[0] = RIGHT;
+					return tmp;
+				}
+				if(u->x[u->who] == u->emagic_x[j][i] && u->y[u->who] - 1 == u->emagic_y[j][i])
+				{
+					tmp.act = ONE;
+					tmp.dir[0] = UP;
+					return tmp;
+				}
+				if(u->x[u->who] == u->emagic_x[j][i] && u->y[u->who] + 1 == u->emagic_y[j][i])
+				{
+					tmp.act = ONE;
+					tmp.dir[0] = DOWN;
+					return tmp;
+				}
+			}
+	}
+	
+	int haha = -1;
+	if(u->magic_num[u->who] == 0)
+		haha = atc(u);
+	if(haha == 0)
+	{
+		tmp.act = ATC;
+		for(int i = 0; i < 30; ++i)
+			tmp.dir[i] = u->dir[u->who];
+		return tmp;
+	}
+	else if(haha != -1)
+	{
+		tmp.act = ATC;
+		for(int i = 0; i < 30; ++i)
+			tmp.dir[i] = haha;
+		return tmp;
+	}
+	tmp = getO(u);
+	if(tmp.act == STOP)
+		return get_safe(u);
+	return tmp;
+}
